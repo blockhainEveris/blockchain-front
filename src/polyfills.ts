@@ -1,31 +1,3 @@
-// Define Webpack public path in order to properly server static assets
-let resolvePublicPath = function() {
-	// Take into account NOVA's junction
-	let uuaa: string = window.location.pathname.indexOf('ENOA') > -1 ? 'ENOA' : undefined;
-	let pathnameElement: Element = document.head.querySelector("[property='nova:serviceName']");
-	let serviceName: string = '/';
-
-	if (pathnameElement)
-	{
-		let pathname: string = pathnameElement.getAttribute('content');
-
-		if (pathname && pathname !== '${serviceName}')
-		{
-			if (uuaa)
-			{
-				serviceName = serviceName + uuaa + '/';
-			}
-
-			serviceName = serviceName + pathname + '/';
-		}
-	}
-
-	return serviceName;
-};
-
-declare let __webpack_public_path__: string;
-__webpack_public_path__ = resolvePublicPath();
-
 import 'core-js/es6/symbol';
 import 'core-js/es6/object';
 import 'core-js/es6/function';
