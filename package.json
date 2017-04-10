@@ -21,7 +21,7 @@
     "build:dev": "npm run clean && npm run test && cross-env NODE_ENV=development webpack --progress --bail --profile",
     "build:production": "npm run clean && npm run test && cross-env NODE_ENV=production webpack --progress --bail --profile",
     "****** RUNNING ******": "",
-    "start": "webpack-dev-server --inline --port 3000 --watch --content-base src/"
+    "start": "webpack-dev-server --inline --port 9999 --watch --content-base src/"
   },
   "author": "BBVA",
   "dependencies": {
