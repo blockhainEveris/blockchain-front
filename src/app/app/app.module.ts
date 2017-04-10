@@ -5,10 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { Thin2Config, ConfigService, ConfigLoader } from 'thin2-config';
-import { LoggerModule } from 'thin2-log';
-import { Thin2RouterService } from 'thin2-router';
-
 import { LocationLoader } from './app.location';
 import { MainComponent } from './../views/main/main.component';
 
@@ -32,8 +28,6 @@ const routes: Routes  = [
         BrowserModule,
         HttpModule,
         RouterModule.forRoot(routes, { useHash: true }),
-        LoggerModule,
-        Thin2Config,
         FormsModule
     ],
     declarations: [
@@ -49,12 +43,6 @@ const routes: Routes  = [
         {
           provide: APP_BASE_HREF,
           useValue: '/'
-        },
-        {
-            provide: APP_INITIALIZER,
-            useFactory: ConfigLoader,
-            deps: [ConfigService],
-            multi: true
         }
     ],
     bootstrap: [

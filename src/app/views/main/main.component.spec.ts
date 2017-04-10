@@ -4,15 +4,11 @@ import { HttpModule, Http, BaseRequestOptions, Response, ResponseOptions, XHRBac
 
 import { MainComponent } from './main.component';
 
-import { Thin2Config, ConfigService, ConfigLoader } from 'thin2-config';
-import { LoggerModule } from 'thin2-log';
-import { Thin2RouterService } from 'thin2-router';
-
 describe('MainComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [Thin2Config, LoggerModule],
+            imports: [],
             declarations: [MainComponent],
             providers: [
               // Add a custom Http object with a backend that doesn't generate real Http requests
