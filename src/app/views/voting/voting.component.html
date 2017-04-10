@@ -1,0 +1,9 @@
+<div *ngFor="let vote of voting" class="voting-component">
+  <h4>{{vote.description}}</h4>
+  <div [ngSwitch]="vote.voting_deadline_in_minutes <= 0">
+    <div *ngSwitchCase="true" class="voting-expired">EXPIRED</div>
+    <div *ngSwitchCase="false" class="voting-indate">{{vote.voting_deadline_in_minutes}} minutes left - OPEN
+      <button class="btn btn-success" style="margin-left:5%" (click)="goToVote(vote.id)">Go!</button>
+    </div>
+  </div>
+</div>

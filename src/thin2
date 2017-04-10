@@ -1,0 +1,32 @@
+{
+	"nova": {
+		"thin2": {
+			"cfg": "configuration",
+			"port": "15000",
+			"application": {
+				"name": "chatbots_app",
+				"company": "BBVA",
+				"date": "30/11/2016"
+			},
+			"log": {
+				"env": "pre",
+				"arch_level": "warn",
+				"debug": true,
+				"loggers": [
+					{
+						"name": "default",
+						"level": "warn",
+						"appenders": [
+							{
+								"type": "console",
+								"name": "default1",
+								"utc": true,
+								"format": "mm-DD-YYYY HH:mm:ssZ"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

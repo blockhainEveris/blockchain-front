@@ -1,0 +1,13 @@
+<div class="login-box">
+  <div class="login-userid">
+    User ID:
+  </div>
+  <div>
+    <input type="text" class="form-control" [(ngModel)]='name' />
+  </div>
+  <div class="login-button text-center">
+    <button class="btn btn-success" (click)="onSelect(name)">Login!</button>
+  </div>
+
+  <div *ngIf="loginError" style="color: red">Wrong user.</div>
+</div>

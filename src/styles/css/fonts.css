@@ -1,0 +1,34 @@
+@font-face {
+    font-family: BentonSansBBVA-Bold;
+    src: url(../fonts/BentonSansBBVA-Bold.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-Bold.svg) format('svg'), url(../fonts/BentonSansBBVA-Bold.woff) format('woff'), url(../fonts/BentonSansBBVA-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: BentonSansBBVA-Book;
+    src: url(../fonts/BentonSansBBVA-Book.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-Book.svg) format('svg'), url(../fonts/BentonSansBBVA-Book.woff) format('woff'), url(../fonts/BentonSansBBVA-Book.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: BentonSansBBVA-BookItalic;
+    src: url(../fonts/BentonSansBBVA-BookItalic.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-BookItalic.svg) format('svg'), url(../fonts/BentonSansBBVA-BookItalic.woff) format('woff'), url(../fonts/BentonSansBBVA-BookItalic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: BentonSansBBVA-Light;
+    src: url(../fonts/BentonSansBBVA-Light.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-Light.svg) format('svg'), url(../fonts/BentonSansBBVA-Light.woff) format('woff'), url(../fonts/BentonSansBBVA-Light.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: BentonSansBBVA-Medium;
+    src: url(../fonts/BentonSansBBVA-Medium.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-Medium.svg) format('svg'), url(../fonts/BentonSansBBVA-Medium.woff) format('woff'), url(../fonts/BentonSansBBVA-Medium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: BentonSansBBVA-MediumItalic;
+    src: url(../fonts/BentonSansBBVA-MediumItalic.eot) format('embedded-opentype'), url(../fonts/BentonSansBBVA-MediumItalic.svg) format('svg'), url(../fonts/BentonSansBBVA-MediumItalic.woff) format('woff'), url(../fonts/BentonSansBBVA-MediumItalic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: TiemposTextWeb-Regular;
+    src: url(../fonts/TiemposTextWeb-Regular.eot) format('embedded-opentype'), url(../fonts/TiemposTextWeb-Regular.woff) format('woff'), url(../fonts/TiemposTextWeb-Regular.woff2) format('woff2');
+}

@@ -1,0 +1,331 @@
+/*:root {
+    --bbva-color-navy: #072146;
+    --bbva-color-white: #FFFFFF;
+    --bbva-color-yellow: #F8CD51;
+    --bbva-color-200: #E9E9E9;
+    --bbva-color-300: #D3D3D3;
+    --bbva-color-400: #BDBDBD;
+    --bbva-color-500: #666666;
+    --bbva-color-600: #121212;
+    --bbva-color-core-blue: #004481;
+    --bbbva-color-light-blue: #5BBEFF;
+    --bbva-color-medium-blue: #2A86CA;
+    --bbva-color-white-medium-blue: #49A5E6;
+    --bbva-color-white-core-blue: #1464A5;
+    --bbva-color-dark-core-blue: #043263;
+}*/
+
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.scss';
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #072146;
+    font-family: BentonSansBBVA-Medium !important;
+    height: 100%;
+}
+
+a { text-decoration: none !important; }
+a:visited {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.bbva-web .option-menu {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.bbva-web .container-basic-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.bbva-web .container-basic-header,
+.bbva-web .container-menu-level-1,
+.bbva-web .container-menu-level-2,
+.bbva-web .container-menu-level-3,
+.bbva-web .container-content,
+.bbva-web .container-pre-footer,
+.bbva-web .container-footer {
+    width: 100%;
+}
+
+.bbva-web .container-basic-header,
+.bbva-web .container-footer {
+    color: #FFFFFF;
+    background: #072146;
+}
+
+/* -- header -- */
+.bbva-web .container-basic-header .home-logo,
+.bbva-web .container-basic-header .main-menu-level-1,
+.bbva-web .container-basic-header .user-area {
+    vertical-align: middle;
+}
+/* ------------------------------------------------------- */
+
+
+/* ------------------ start inline list ------------------ */
+
+
+/* ---------------------- global use ---------------------- */
+.bbva-web .bbva-inline-list {
+    list-style-type: none;
+    padding: 0px;
+    font-size: 0px;
+}
+
+.bbva-web .bbva-inline-list * {
+    font-size: 16px;
+}
+
+.bbva-web .bbva-inline-list li {
+    display: inline-block;
+}
+
+/* ------------------- end inline list ------------------- */
+
+.bbva-web .container-basic-header {
+    color: #BDBDBD;
+}
+
+
+/* -- header -- */
+.bbva-web .container-basic-header .menu-auxiliary {
+    margin-bottom: 15px;
+}
+
+
+.bbva-web .container-basic-header .menu-auxiliary li {
+    font-size: 11px;
+}
+
+
+.bbva-web .container-basic-header .menu-auxiliary li {
+    width: calc(100% / 3);
+}
+
+
+.bbva-web .container-basic-header .menu-auxiliary li span {
+    padding-right: 5px;
+    font-size: 11px;
+}
+
+
+.bbva-web .container-basic-header .menu-auxiliary .find-branch {
+    text-align: center;
+}
+
+.bbva-web .container-basic-header .menu-auxiliary .contact-us {
+    text-align: right;
+}
+
+
+.bbva-web .main-menu .main-menu-level-1 li {
+    width: calc(100% / 4);
+    font-size: 11px;
+}
+
+
+.bbva-web .main-menu .main-menu-level-1 .selected-white {
+    color: #FFFFFF;
+}
+
+.bbva-web .user-area {
+    text-align: right;
+    font-size: 11px;
+}
+
+.bbva-web .user-area .log-in,
+.bbva-web .user-area .sign-up {
+    font-size: 11px;
+}
+
+.bbva-web .user-area .log-in {
+    color: #F8CD51;
+    margin-right: 10px;
+}
+
+
+/* --------------------------- menu level 2 ----------------------------- */
+.bbva-web .container-menu {
+    background: #004481;
+    color: #E9E9E9;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.bbva-web .container-menu .option-menu {
+    font-family: BentonSansBBVA-Light;
+}
+
+.bbva-web .container-menu .option-menu:not(.side) {
+    text-align: center;
+}
+
+.bbva-web .container-menu .side:last-child {
+    text-align: right;
+}
+
+.bbva-web .container-menu .option-menu .bbva-ic-search_icon {
+    color: #49A5E6;
+}
+
+.bbva-web .container-menu .option-menu:not(:last-child) {
+    margin-right: 50px;
+}
+
+/*.bbva-web .container-menu .option-menu:last-child {
+    float: right;
+}*/
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+ul li.main-menu-level-2 a, ul li.main-menu-level-2 a:visited {
+    color: white;
+}
+
+/* --------------------------- content & pre-footer ----------------------------- */
+.bbva-web .container-content {
+    padding-top: 20px;
+}
+
+.bbva-web .container-content,
+.bbva-web .container-pre-footer {
+    background: #FFFFFF;
+    padding-bottom: 50px;
+}
+
+
+/* --------------------------- content ----------------------------- */
+.bbva-web .container-content .content {
+    text-align: center;
+}
+
+.bbva-content-body-example {
+    font-size: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #BDBDBD;
+    color: #D3D3D3;
+    text-shadow: 3px 3px 2px #E9E9E9;
+}
+
+
+/* --------------------------- pre-footer ----------------------------- */
+.bbva-web .container-pre-footer {
+    padding-bottom: 20px;
+}
+
+.bbva-web .container-pre-footer .block {
+    vertical-align: top;
+}
+
+.bbva-web .container-pre-footer .block-title {
+    font-size: 13px;
+    font-family: BentonSansBBVA-Book;
+    margin-bottom: 15px;
+}
+
+.bbva-web .container-pre-footer .list-options .option-menu {
+    color: #2A86CA;
+    font-size: 11px;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.bbva-web .container-pre-footer .get-started {
+    color: #121212;
+}
+
+.bbva-web .container-pre-footer .get-started,
+.bbva-web .container-pre-footer .download-block .title {
+    font-family: BentonSansBBVA-Medium;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.bbva-web .container-pre-footer .download-block .title,
+.bbva-web .container-pre-footer .download-block .bbva-download_icon {
+    color: #2A86CA;
+}
+
+.bbva-web .container-pre-footer .download-block .title {
+    vertical-align: top;
+}
+
+
+/* --------------------------- footer ----------------------------- */
+.bbva-web .container-footer {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.bbva-web .container-footer .brand-bank .logoBBVA,
+.bbva-web .container-footer .brand-bank .title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bbva-web .container-footer .brand-bank .logoBBVA {
+    /*background: url(../images/logoBBVA.png);*/
+    background-repeat: no-repeat;
+    width: 76px;
+    height: 27px;
+}
+
+.bbva-web .container-footer .brand-bank .title {
+    color: #BDBDBD;
+    font-size: 13px;
+}
+
+.bbva-web .container-footer .social-accounts .account {
+    color: #5BBEFF;
+}
+
+.bbva-web .container-footer .social-accounts .account:not(:last-child) {
+    margin-right: 15px;
+}
+
+.bbva-web .container-footer .politics-bank {
+    margin-top: 30px;
+}
+
+.bbva-web .container-footer .politics-bank .option-menu {
+    font-size: 13px;
+    color: #5BBEFF;
+}
+
+.bbva-web .container-footer .politics-bank .option-menu:not(:last-child) {
+    margin-right: 20px;
+}
+
+.bbva-web .container-footer .politics-bank .option-menu.selected-blue {
+    color: #2A86CA;
+}
+
+.bbva-web .container-footer .copyright {
+    font-family: BentonSansBBVA-Light;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.bbva-web .container-footer .copyright .copy-logo-bank {
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+.body-thin2 {
+    padding: 100px 5px;
+}
+
+.body-thin2 h1 {
+    padding-top: 100px;
+}

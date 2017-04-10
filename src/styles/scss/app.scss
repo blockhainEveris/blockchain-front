@@ -1,0 +1,189 @@
+@import './colors';
+@import './fonts';
+//@import './bootstrap';
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+bbva-app {
+  background: $white;
+}
+
+body {
+  background-color: $site-color;
+  height: 100%;
+  font-family: BentonSansBBVA-Medium !important;
+}
+
+a { text-decoration: none !important; }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+}
+
+.menu {
+  background: $menu-color;
+  color: $menu-font-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.menu.main {
+  padding-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.menu.main ul li {
+  margin: auto 0;
+}
+
+.menu.main ul li a {
+  font-weight: bold;
+}
+
+.menu.submenu {
+  background: $submenu-color;
+  color: $submenu-font-color;
+}
+
+.menu.documentation {
+  background: $white;
+}
+
+.menu.documentation ul {
+  border-right: 0.2rem;
+  border-color: $blue2;
+  border-right-style: solid;
+}
+
+.menu.documentation a {
+  color: $black;
+}
+
+.menu .menu-option {
+  font-family: BentonSansBBVA-Light;
+  cursor: pointer;
+  list-style: none;
+}
+
+.header {
+  background-color: $header-color;
+  color: $header-font-color;
+  border-bottom-style: solid;
+  padding-bottom: 0.5%;
+}
+
+.content {
+  background-color: $white;
+}
+
+.footer {
+  background-color: $footer-color;
+  color: $footer-font-color;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .footer-logo,
+.footer .title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .copyright {
+  font-family: BentonSansBBVA-Light;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+/* Creates a vertical nav starting at 768px (sm) */
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav .collapse {
+        display: block;
+    }
+}
+
+.home-logo {
+  margin: auto 0;
+}
+
+.subheader {
+  color: $site-color;
+  font-weight: bold;
+}
+
+.card-title {
+  color: $site-color;
+}
+
+.brand-bank {
+  margin: auto 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo {
+  max-width: 13%;
+  padding-left: 1%
+}
+
+.login-box {
+  position: relative;
+  width: 40%;
+  margin: 50% auto;
+  border: solid;
+  border-color: #BDBDBD;
+  border-width: 3px;
+}
+
+.login-userid {
+  color: #BDBDBD;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-control{
+  width: 75%;
+  padding: 0.2rem 0.4rem;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: $footer-color;
+  border-color: $footer-color;
+}
+
+.btn-success:hover {
+  background-color: #9ACD32;
+  border-color: #9ACD32
+}
+
+.voting-component {
+  background-color: #BDBDBD;
+  margin: 5% 5%;
+  padding: 2% 0%;
+  text-align: center;
+}
+
+.voting-expired {
+  color: red;
+  position: relative;
+}
+
+.voting-indate {
+  color: green;
+  position:relative;
+}
