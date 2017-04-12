@@ -9,12 +9,10 @@ import 'rxjs/add/operator/map';
 export class VotingService {
 
   private votingUrl = "https://blockchain-middleware-everis.herokuapp.com/api/v1/apps/blockchain/query";
-  private resp: any;
 
   constructor(private http: Http) { }
 
   getAllVotings(): Observable<any[]>{
-    console.log("Hago la llamada");
     return this.http.get(this.votingUrl)
                     .map(this.extractDataForVotings)
                     .catch(this.handleError);
@@ -22,7 +20,6 @@ export class VotingService {
 
   private extractDataForVotings(res: Response) {
     let body = res.json();
-    console.log("extraemos datos " + JSON.stringify(body, null, 4));
     return body.votings || { };
   }
 

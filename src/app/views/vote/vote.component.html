@@ -1,2 +1,23 @@
-<h2>{{vote}}</h2>
-<button (click)="goBack()">Back</button>
+<div *ngIf="vote">
+  <h2>{{vote.description}}</h2>
+</div>
+<ul class="option" *ngIf="options">
+  <li *ngFor="let option of options">
+    <span class="badge">{{option.id}}</span> {{option.description}}
+  </li>
+</ul>
+<div>
+  <label>Select your role:</label>
+  <select>
+    <option value="SA">SA</option>
+    <option value="SN">SN</option>
+    <option value="SK">SK</option>
+    <option value="SKL">SKL</option>
+    <option value="Manager">Manager</option>
+  </select>
+</div>
+<div>
+  <button class="btn btn-success" (click)="goBack()">Back</button>
+  <button class="btn btn-success">Vote!</button>
+  <button class="btn btn-success" (click)="goResults(vote.id)">Results</button>
+</div>
