@@ -28,8 +28,8 @@ export class ResultsComponent {
 
   public barChartColors:Array<any> = [
     { // everis-green
-      backgroundColor: '#9CAD05',
-      borderColor: '#9CAD05'
+      backgroundColor: '#d6d6c2',
+      borderColor: '#FFF'
     }
   ];
 

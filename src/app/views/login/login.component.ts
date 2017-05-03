@@ -20,6 +20,7 @@ export class LoginComponent{
 
   onSelect(name: string): void{
     this.loginError = false;
+    localStorage.setItem("userName", name);
     var loginResult = this.loginService.getLogerResult(name);
     //Consultar al servicio que tiene los usuarios
 

@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { ChartsModule } from 'ng2-charts';
-import { LocationLoader } from './app.location';
 import { MainComponent } from './../views/main/main.component';
 
 import { HeaderComponent } from './../sections/header/header.component';

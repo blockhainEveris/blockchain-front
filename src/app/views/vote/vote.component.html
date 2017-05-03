@@ -1,23 +1,42 @@
-<div *ngIf="vote">
-  <h2>{{vote.description}}</h2>
-</div>
-<ul class="option" *ngIf="options">
-  <li *ngFor="let option of options">
-    <span class="badge">{{option.id}}</span> {{option.description}}
-  </li>
-</ul>
-<div>
-  <label>Select your role:</label>
-  <select>
-    <option value="SA">SA</option>
-    <option value="SN">SN</option>
-    <option value="SK">SK</option>
-    <option value="SKL">SKL</option>
-    <option value="Manager">Manager</option>
-  </select>
-</div>
-<div>
-  <button class="btn btn-success" (click)="goBack()">Back</button>
-  <button class="btn btn-success">Vote!</button>
-  <button class="btn btn-success" (click)="goResults(vote.id)">Results</button>
+<div class="vote-section">
+  <div *ngIf="vote">
+    <h2>{{vote.description}}</h2>
+  </div>
+  <form class="form-group" (ngSubmit)="voteOption()" #voteForm="ngForm">
+    <ul class="option" *ngIf="options">
+      <label>Options:</label>
+      <li *ngFor="let option of options" [class.selected]="option === selected" (click)="optionSelected(option)">
+        <span class="badge">{{option.id}}</span> {{option.description}}
+      </li>
+    </ul>
+    <div class="form-element">
+      <label>Select your role:</label>
+      <select class="form-control" [(ngModel)]="emitVote.voter.category" name="category">
+        <option value="SA">SA</option>
+        <option value="SN">SN</option>
+        <option value="SK">SK</option>
+        <option value="SKL">SKL</option>
+        <option value="Manager">Manager</option>
+      </select>
+    </div>
+    <div class="form-element">
+      <label>Select your office:</label>
+      <select class="form-control" [(ngModel)]="emitVote.voter.office" name="office">
+        <option value="MAD">Madrid</option>
+        <option value="BCN">Barcelona</option>
+        <option value="BIL">Bilbao</option>
+        <option value="VAL">Valencia</option>
+        <option value="ZGZ">Zaragoza</option>
+      </select>
+    </div>
+    <div class="form-element">
+      <label>Comentario:</label>
+      <textarea class="form-control" rows="4" cols="50" [(ngModel)]="emitVote.justification" name="justification"></textarea>
+    </div>
+    <div class="my-form-buttons">
+      <button class="btn rounded-btn" (click)="goBack()">Back</button>
+      <button class="btn rounded-btn"type="submit">Vote!</button>
+      <button class="btn rounded-btn" (click)="goResults(vote.id)">Results</button>
+    </div>
+  </form>
 </div>

@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 export class VotingService {
 
   private votingUrl = "https://blockchain-middleware-everis.herokuapp.com/api/v1/apps/blockchain/query";
+  private voteURL = "https://blockchain-middleware-everis.herokuapp.com/api/v1/apps/blockchain/vote"
 
   constructor(private http: Http) { }
 
@@ -24,7 +25,6 @@ export class VotingService {
   }
 
   private handleError (error: Response | any) {
-    // In a real world app, you might use a remote logging infrastructure
     let errMsg: string;
     if (error instanceof Response) {
       const body = error.json() || '';
@@ -35,6 +35,15 @@ export class VotingService {
     }
     console.error(errMsg);
     return Observable.throw(errMsg);
+  }
+
+  vote(vote: any): Observable<any[]>{
+    console.log("VOTO " + JSON.stringify(vote));
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http
+             .put(this.voteURL, JSON.stringify(vote))
+             .map(res => res.json());
   }
 
 }
