@@ -1,15 +1,24 @@
-<div *ngIf="options">
-  <h2>{{vote.description}}</h2>
-  <div style="display: block">
-    <canvas baseChart
-    [datasets]="barChartData"
-    [labels]="barChartLabels"
-    [options]="barChartOptions"
-    [colors]="barChartColors"
-    [legend]="barChartLegend"
-    [chartType]="barChartType"></canvas>
-  </div>
-  <div>
-    <button class="btn btn-success" (click)="goBack()">Back</button>
+<div class="vote-section">
+  <div *ngIf="options">
+    <h2>{{vote.description}}</h2>
+    <div>
+      <canvas class="chart" baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"></canvas>
+    </div>
+    <!--<div>
+      <canvas class="chart" baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"></canvas>
+    </div>-->
+    <div>
+      <button class="btn rounded-btn" (click)="goBack()">Back</button>
+      <button class="btn rounded-btn" (click)="refreshChart()">Refresh</button>
+    </div>
   </div>
 </div>

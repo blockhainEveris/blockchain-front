@@ -1,13 +1,16 @@
-<div class="login-box">
-  <div class="login-userid">
-    User ID:
-  </div>
-  <div>
-    <input type="text" class="form-control" [(ngModel)]='name' />
-  </div>
-  <div class="login-button text-center">
-    <button class="btn btn-success" (click)="onSelect(name)">Login!</button>
-  </div>
-
-  <div *ngIf="loginError" style="color: red">Wrong user.</div>
+<div class="login-page animate">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4">
+			<h1>Votechain</h1>
+			<form role="form">
+				<div class="form-content">
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" name="id" id="" [(ngModel)]="name" placeholder="Id">
+						<div *ngIf="loginError" style="color: red"><h5>Wrong user</h5></div>
+					</div>
+				</div>
+				<a class="btn rounded-btn" (click)="onSelect(name)"> Log in </a>
+			</form>
+		</div>
+	</div>
 </div>

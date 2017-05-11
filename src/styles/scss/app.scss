@@ -1,235 +1,218 @@
 @import './colors';
-@import './fonts';
-//@import './bootstrap';
 
 html {
   height: 100%;
+  background: #f2f2f2;
   box-sizing: border-box;
 }
 
-bbva-app {
-  background: $white;
+h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
 }
 
-body {
-  background-color: $site-color;
-  height: 100%;
-  font-family: BentonSansBBVA-Medium !important;
-}
-
-a { text-decoration: none !important; }
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.container {
-}
-
-.menu {
-  background: $menu-color;
-  color: $menu-font-color;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.menu.main {
-  padding-top: 0.5rem;
-  padding: 0.5rem;
-}
-
-.menu.main ul li {
-  margin: auto 0;
-}
-
-.menu.main ul li a {
-  font-weight: bold;
-}
-
-.menu.submenu {
-  background: $submenu-color;
-  color: $submenu-font-color;
-}
-
-.menu.documentation {
-  background: $white;
-}
-
-.menu.documentation ul {
-  border-right: 0.2rem;
-  border-color: $blue2;
-  border-right-style: solid;
-}
-
-.menu.documentation a {
-  color: $black;
-}
-
-.menu .menu-option {
-  font-family: BentonSansBBVA-Light;
-  cursor: pointer;
-  list-style: none;
-}
-
-.header {
-  background-color: $header-color;
-  color: $header-font-color;
-  border-bottom-style: solid;
-  padding-bottom: 0.5%;
-}
-
-.content {
-  background-color: $white;
-}
-
-.footer {
-  background-color: $footer-color;
-  color: $footer-font-color;
-  padding: 10px 0;
-  position: fixed;
+.login-page {
+  background: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
-}
+  text-align: center;
+  color: #808080;
+  margin: 3em;
+  .col-lg-4 {
+    padding :0;
+  }
 
-.footer .footer-logo,
-.footer .title {
-  display: inline-block;
-  vertical-align: middle;
-}
+  a {
+    cursor: pointer;
+  }
+  .input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px !important;
+    line-height: 1.3333333;
+    border-radius: 0;
+  }
+  .input-underline {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #808080;
+    color: #808080;
+    border-radius: 0;
+  }
+  .input-underline:focus {
+    border-bottom: 2px solid #808080;
+    box-shadow: none;
+  }
+  .rounded-btn{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #808080;
+    background: #f2f2f2;
+    border: 2px solid #808080;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px;
+  }
+  .rounded-btn:hover,.rounded-btn:focus,.rounded-btn:active,.rounded-btn:visited{
+    color: #4d4d4d;
+    border: 2px solid #4d4d4d;
+    outline: none;
+  }
 
-.footer .copyright {
-  font-family: BentonSansBBVA-Light;
-  font-size: 25px;
-  margin-top: 20px;
-}
-
-/* Creates a vertical nav starting at 768px (sm) */
-@media (min-width: 768px) {
-    .bootstrap-vertical-nav .collapse {
-        display: block;
+  h1 {
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    small {
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      font-weight: 300;
     }
+  }
+
+  .form-group {
+    padding: 8px 0;
+    width: 50%;
+    margin: 0 auto;
+    input::-webkit-input-placeholder {
+      color: #808080 !important;
+    }
+
+    input:-moz-placeholder { /* Firefox 18- */
+      color: #808080 !important;
+    }
+
+    input::-moz-placeholder {  /* Firefox 19+ */
+      color: #808080 !important;
+    }
+
+    input:-ms-input-placeholder {
+      color: #808080 !important;
+    }
+  }
+  .form-content {
+    padding: 40px 0;
+  }
 }
 
-.home-logo {
-  margin: auto 0;
+.vote-section {
+  background: #f2f2f2;
+  color: #808080;
+
+  .rounded-btn{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #808080;
+    background: #f2f2f2;
+    border: 2px solid #808080;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px;
+  }
+  .rounded-btn:hover,.rounded-btn:focus,.rounded-btn:active,.rounded-btn:visited{
+    color: #4d4d4d;
+    border: 2px solid #4d4d4d;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
-.subheader {
-  color: $site-color;
-  font-weight: bold;
+.form-element {
+  padding-bottom: 1em;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.card-title {
-  color: $site-color;
+option {
+  background: #cbcbb3;
 }
 
-.brand-bank {
-  margin: auto 0;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.logo {
-  max-width: 13%;
-  padding-left: 1%
-}
-
-.login-box {
-  position: relative;
-  width: 40%;
-  margin: 50% auto;
-  border: solid;
-  border-color: #BDBDBD;
-  border-width: 3px;
-}
-
-.login-userid {
-  color: #BDBDBD;
-  font-weight: bold;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.form-control{
-  width: 75%;
-  padding: 0.2rem 0.4rem;
-  margin-left: 10px;
-  margin-bottom: 20px;
-}
-
-.btn-success {
-  background-color: $footer-color;
-  border-color: $footer-color;
-}
-
-.btn-success:hover {
-  background-color: #9ACD32;
-  border-color: #9ACD32
-}
-
-.voting-component {
-  background-color: #BDBDBD;
-  margin: 5% 5%;
-  padding: 2% 0%;
+.my-form-buttons {
   text-align: center;
 }
 
-.voting-expired {
-  color: red;
-  position: relative;
+ul{
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.voting-indate {
-  color: green;
-  position:relative;
-}
-/* items class */
-.option {
-  margin: 0 0 2em 0;
+li {
+  background: white;
+  margin: 0.4em;
+  border-radius: .3em;
+  color: #464a4c;
   list-style-type: none;
-  padding: 0;
-  width: 15em;
-  font-size: 1em;
-}
-.option li {
   cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
 }
-.option li.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
+
+li:hover{
+  background: #e0e0d1;
 }
-.option li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+
+.selected {
+  background: #bfbfbf !important;
 }
-.option .text {
-  position: relative;
-  top: -3px;
+
+.badge {
+  padding: 0em 0.7em;
+  border-radius: .3em;
+  background: #d6d6c2;
 }
-.option .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: $footer-color;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-  font-size: 1em;
+
+.voting-component {
+  background: #f2f2f2;
+  color: #808080;
+  border-color: #808080;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 1em 0em 1em 1.5em;
+  border: 3px solid #808080;
+  border-radius: 0.5em;
+
+  .rounded-btn{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: #808080;
+    background: #f2f2f2;
+    border: 2px solid #808080;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px;
+  }
+  .rounded-btn:hover,.rounded-btn:focus,.rounded-btn:active,.rounded-btn:visited{
+    color: #4d4d4d;
+    border: 2px solid #4d4d4d;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.my-form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+.vote-ok {
+  text-align: center;
+  font-weight: bold;
+  width: 75%;
+  margin: 0 auto;
+  color: green;
+  border: 3px solid green;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.chart {
+  height: 45% !important;
+  width: 75% !important;
+  margin: 0 auto !important;
 }

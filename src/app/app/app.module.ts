@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { ChartsModule } from 'ng2-charts';
-import { LocationLoader } from './app.location';
+import { ToastyModule } from 'ng2-toasty';
 import { MainComponent } from './../views/main/main.component';
 
 import { HeaderComponent } from './../sections/header/header.component';
@@ -32,7 +32,8 @@ const routes: Routes  = [
         HttpModule,
         RouterModule.forRoot(routes, { useHash: true }),
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        ToastyModule.forRoot()
     ],
     declarations: [
         MainComponent,
