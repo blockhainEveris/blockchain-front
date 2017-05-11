@@ -15,29 +15,29 @@ import { VotingService } from './../../service/voting.service';
 export class VoteComponent implements OnInit{
 
   private voting: any;
+  private responseOk: boolean = false;
   private vote: any;
   private options: any;
-  private emitVote: any;
   private productId: any;
   private selected: any;
+  private emitVote: any = {
+    "justification": "Justificacion",  //HECHO
+    "optionId": 2, //HECHO
+    "voter": {
+      "boteid": "123", //HECHO
+      "conversationid": "abc123", //HECHO
+      "channel": "Webapp", //HECHO
+      "senderid": "dlaradie",
+      "name": "dlaradie"
+    },
+    "votingId": 1412366217
+  }
+  private voteResult;
 
   constructor(private route: ActivatedRoute,
     private location: Location,
     private votingService: VotingService,
-    private router: Router) {
-      this.emitVote = {
-        "justification": "Justificacion", // HECHO
-        "optionId": 2, //Medio Hecho
-        "voter": {
-          "category": "SN", // HECHO
-          "channel": "Webapp", // HECHO
-          "id": "5", // HECHO
-          "name": "dlaradie", // HECHO
-          "office": "MAD" // HECHO
-        },
-        "votingId": 1412366217 // HECHO
-      }
-    }
+    private router: Router) { }
 
       ngOnInit(){
         this.productId = this.route.snapshot.params['id'];
@@ -64,10 +64,13 @@ export class VoteComponent implements OnInit{
       voteOption(){
         this.emitVote.votingId = this.productId;
         this.emitVote.voter.name = localStorage.getItem("userName");
-        this.emitVote.voter.id = Math.floor( Math.random() * 1000 );
+        this.emitVote.voter.senderid = localStorage.getItem("userName");
         this.emitVote.optionId = this.selected.id;
         this.votingService.vote(this.emitVote).subscribe(response => {
-          console.log("EL RESULTADO DE PUT ES " + JSON.stringify(response, null, 4))
+          console.log("EL RESULTADO DE PUT ES " + JSON.stringify(response, null, 4));
+          if(response.status === 'OK') {
+            this.responseOk = true;
+          }
         });
       }
 

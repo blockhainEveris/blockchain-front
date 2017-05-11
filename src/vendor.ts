@@ -9,3 +9,4 @@ import '@angular/platform-browser-dynamic';
 
 import 'rxjs/Rx';
 import 'chart.js/src/chart';
+import 'ng2-toasty/bundles/index.umd.js';

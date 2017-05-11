@@ -1,8 +1,8 @@
 <div class="vote-section">
   <div *ngIf="options">
     <h2>{{vote.description}}</h2>
-    <div class="chart">
-      <canvas baseChart
+    <div>
+      <canvas class="chart" baseChart
       [datasets]="barChartData"
       [labels]="barChartLabels"
       [options]="barChartOptions"
@@ -10,8 +10,15 @@
       [legend]="barChartLegend"
       [chartType]="barChartType"></canvas>
     </div>
+    <!--<div>
+      <canvas class="chart" baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"></canvas>
+    </div>-->
     <div>
       <button class="btn rounded-btn" (click)="goBack()">Back</button>
+      <button class="btn rounded-btn" (click)="refreshChart()">Refresh</button>
     </div>
   </div>
 </div>

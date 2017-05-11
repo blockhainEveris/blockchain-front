@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { Headers, Http, Response  } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
+import { config } from '../../config/config';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class VotingService {
 
-  private votingUrl = "https://blockchain-middleware-everis.herokuapp.com/api/v1/apps/blockchain/query";
-  private voteURL = "https://blockchain-middleware-everis.herokuapp.com/api/v1/apps/blockchain/vote"
+  private votingUrl = config.query;
+  private voteURL = config.vote;
 
   constructor(private http: Http) { }
 
@@ -37,12 +38,12 @@ export class VotingService {
     return Observable.throw(errMsg);
   }
 
-  vote(vote: any): Observable<any[]>{
+  vote(vote: any): Observable<any>{
     console.log("VOTO " + JSON.stringify(vote));
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http
-             .put(this.voteURL, JSON.stringify(vote))
+             .put(this.voteURL, JSON.stringify(vote), {headers: headers})
              .map(res => res.json());
   }
 

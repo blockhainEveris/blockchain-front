@@ -17,9 +17,13 @@ export class ResultsComponent {
   public barChartType:string = 'bar';
   public barChartLegend:boolean = false;
   public barChartData:any[] = [];
+  //public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  //public doughnutChartData:number[] = [350, 450, 100];
+//public doughnutChartType:string = 'doughnut';
   private voting: any;
   private vote: any;
   private options: any;
+  private productId: any;
 
   public barChartOptions:any = {
     scaleShowVerticalLines: false,
@@ -28,17 +32,17 @@ export class ResultsComponent {
 
   public barChartColors:Array<any> = [
     { // everis-green
-      backgroundColor: '#d6d6c2',
+      backgroundColor: '#808080',
       borderColor: '#FFF'
     }
   ];
 
   ngOnInit(){
-    var productId = this.route.snapshot.params['id'];
+    this.productId = this.route.snapshot.params['id'];
     this.votingService.getAllVotings().subscribe(votings => {
       this.voting = votings;
       for(let entry of this.voting){
-        if(entry.id === productId){
+        if(entry.id === this.productId){
           this.vote = entry;
           this.options = entry.options;
           console.log("VOTO ELEGIDO --> " + JSON.stringify(this.vote, null, 4));
@@ -51,6 +55,8 @@ export class ResultsComponent {
 
   private extractOptionsData(options: any): any{
     var data: number[] = [];
+    this.barChartLabels = [];
+    this.barChartData = [];
     for(let option of options){
       data.push(option.number_of_votes);
       this.barChartLabels.push(option.description);
@@ -60,6 +66,21 @@ export class ResultsComponent {
 
   goBack() {
     this.location.back();
+  }
+
+  refreshChart(): void{
+    this.votingService.getAllVotings().subscribe(votings => {
+      this.voting = votings;
+      for(let entry of this.voting){
+        if(entry.id === this.productId){
+          this.vote = entry;
+          this.options = entry.options;
+          console.log("VOTO ELEGIDO --> " + JSON.stringify(this.vote, null, 4));
+          console.log("OPTIONS --> " + JSON.stringify(this.options, null, 4));
+        }
+      }
+      this.extractOptionsData(this.options);
+    });
   }
 
   constructor(private route: ActivatedRoute,

@@ -19,20 +19,16 @@ export class LoginComponent{
   }
 
   onSelect(name: string): void{
-    this.loginError = false;
-    localStorage.setItem("userName", name);
-    var loginResult = this.loginService.getLogerResult(name);
+    //this.loginError = false;
+    //localStorage.setItem("userName", name);
+    // var loginResult = this.loginService.getLogerResult(name);
     //Consultar al servicio que tiene los usuarios
 
     //Si el usuario es valido, navegar a la vista de votaciones disponibles.
 
     //Si no es válido, sacar un toast de user no válido.
-    if(loginResult){
-      console.log("Usuario correcto");
-      this.router.navigate(["/voting"]);
-    }else{
-      this.loginError = true;
-    }
+    console.log("Usuario correcto");
+    this.router.navigate(["/voting"]);
   }
 
 }

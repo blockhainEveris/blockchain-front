@@ -1,4 +1,5 @@
 <div class='vote-section'>
+  <h3>Please select the voting:</h3>
   <div *ngFor="let vote of voting" class="voting-component">
     <h4>{{vote.description}}</h4>
     <div [ngSwitch]="vote.voting_deadline_in_minutes <= 0">
