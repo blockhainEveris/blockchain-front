@@ -28,6 +28,7 @@ export class ResultsComponent {
   public barChartOptions:any = {
     scaleShowVerticalLines: false,
     responsive: true,
+    beginAtZero: true
   };
 
   public barChartColors:Array<any> = [
